@@ -8,11 +8,11 @@ CREATE TABLE time_validity
 
 CREATE TABLE copyright
 (
-    id  BIGSERIAL PRIMARY KEY,
-    pay INT,
+    id         BIGSERIAL PRIMARY KEY,
+    pay        INT,
     company_id int,
-    time_live int,
-    record_id INT,
+    time_live  int,
+    record_id  INT,
     CONSTRAINT record_fk FOREIGN KEY (record_id) REFERENCES recording (id) ON DELETE CASCADE,
     CONSTRAINT company_fk FOREIGN KEY (company_id) REFERENCES company (id) ON DELETE CASCADE,
     CONSTRAINT time_live_fk FOREIGN KEY (company_id) REFERENCES time_validity (id) ON DELETE CASCADE

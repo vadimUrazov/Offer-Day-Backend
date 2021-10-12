@@ -1,15 +1,11 @@
 package com.example.offerdaysongs.controller;
 
 import com.example.offerdaysongs.dto.CompanyDto;
-import com.example.offerdaysongs.dto.RecordingDto;
-import com.example.offerdaysongs.dto.SingerDto;
 import com.example.offerdaysongs.dto.requests.CreateCompanyRequest;
 import com.example.offerdaysongs.dto.requests.DeleteCompanyRequest;
 import com.example.offerdaysongs.dto.requests.UpdateCompanyRequest;
 import com.example.offerdaysongs.model.Company;
-import com.example.offerdaysongs.model.Singer;
 import com.example.offerdaysongs.service.CompanyService;
-
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -54,9 +50,8 @@ public class CompanyController {
     }
 
 
-
-    private CompanyDto convertToDto(Company company){
+    private CompanyDto convertToDto(Company company) {
         return new CompanyDto(company.getId(), company.getName());
-     }
+    }
 
 }

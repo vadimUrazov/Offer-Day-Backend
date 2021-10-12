@@ -1,1 +1,2 @@
-ALTER TABLE recording ADD COLUMN price INT
+ALTER TABLE recording
+    ADD COLUMN price INT

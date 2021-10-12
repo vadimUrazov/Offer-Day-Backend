@@ -17,8 +17,7 @@ public class SingerController {
     private static final String ID = "id";
     private final SingerService signerService;
 
-    public SingerController(SingerService signerService)
-    {
+    public SingerController(SingerService signerService) {
         this.signerService = signerService;
     }
 
@@ -51,8 +50,7 @@ public class SingerController {
         signerService.delete(request);
     }
 
-    private SingerDto convertToDto(Singer singer)
-    {
+    private SingerDto convertToDto(Singer singer) {
         return new SingerDto(singer.getId(), singer.getName());
     }
 }

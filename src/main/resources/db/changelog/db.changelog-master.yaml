@@ -18,7 +18,7 @@ databaseChangeLog:
   - changeSet:
       id: 3
       author: urazov
-      comment: add tables in database
+      comment: add tables "copyright","time_validate" in database
       sqlFile:
         encoding: UTF-8
         path: migrations/003-add-table.sql

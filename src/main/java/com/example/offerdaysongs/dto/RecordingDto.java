@@ -18,14 +18,14 @@ public class RecordingDto {
     Integer price;
     List<CopyrightDto> copyrights;
 
-    public RecordingDto(long id, String title, String version, ZonedDateTime releaseTime, SingerDto singer, Integer price) {
+    public RecordingDto(long id, String title, String version, ZonedDateTime releaseTime, SingerDto singer,Integer price) {
         this.id = id;
         this.title = title;
         this.version = version;
         this.releaseTime = releaseTime;
         this.singer = singer;
-        this.price = price;
-        this.copyrights = new ArrayList<>();
+        this.price=price;
+        this.copyrights=new ArrayList<>();
     }
 
 }

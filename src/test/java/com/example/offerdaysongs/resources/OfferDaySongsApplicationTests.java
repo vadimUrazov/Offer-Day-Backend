@@ -5,6 +5,8 @@ import com.example.offerdaysongs.dto.requests.CreateCompanyRequest;
 import com.example.offerdaysongs.dto.requests.DeleteCompanyRequest;
 import com.example.offerdaysongs.model.Company;
 import com.example.offerdaysongs.service.CompanyService;
+import com.example.offerdaysongs.service.RecordingService;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.mock.mockito.SpyBean;
 import org.springframework.http.MediaType;
@@ -28,7 +30,7 @@ public class OfferDaySongsApplicationTests extends AbstractControllerTest {
 
     @Test
     public void testCreateCompany() throws Exception {
-        CreateCompanyRequest request = new CreateCompanyRequest();
+        CreateCompanyRequest request=new CreateCompanyRequest();
         request.setName("ISSart");
         this.mockMvc.perform(post("/api/companies/create")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -36,12 +38,11 @@ public class OfferDaySongsApplicationTests extends AbstractControllerTest {
                         .accept(MediaType.APPLICATION_JSON, MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
     }
-
     @Test
     public void testDeleteCompany() throws Exception {
-        CreateCompanyRequest request = new CreateCompanyRequest();
+        CreateCompanyRequest request=new CreateCompanyRequest();
         request.setName("ISSart");
-        DeleteCompanyRequest deleteCompanyRequest = new DeleteCompanyRequest();
+        DeleteCompanyRequest deleteCompanyRequest=new DeleteCompanyRequest();
 
         deleteCompanyRequest.setCompany(new Company("ISSart"));
         this.mockMvc.perform(post("/api/companies/create")
@@ -58,6 +59,9 @@ public class OfferDaySongsApplicationTests extends AbstractControllerTest {
 
 
     }
+
+
+
 
 
 }

@@ -6,6 +6,8 @@ import com.example.offerdaysongs.dto.requests.CreateCompanyRequest;
 import com.example.offerdaysongs.dto.requests.DeleteCompanyRequest;
 import com.example.offerdaysongs.model.Company;
 import com.example.offerdaysongs.service.CompanyService;
+import com.example.offerdaysongs.service.RecordingService;
+import com.example.offerdaysongs.service.SingerService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

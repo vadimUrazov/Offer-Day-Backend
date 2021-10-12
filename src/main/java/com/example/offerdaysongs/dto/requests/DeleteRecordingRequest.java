@@ -5,5 +5,5 @@ import lombok.Data;
 
 @Data
 public class DeleteRecordingRequest {
-    private Recording recording;
+private Recording recording;
 }

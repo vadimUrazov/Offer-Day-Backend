@@ -24,6 +24,6 @@ public class Company {
     }
 
     public Company(String name) {
-        this(0, name);
+        this(0,name);
     }
 }

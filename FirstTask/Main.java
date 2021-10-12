@@ -19,7 +19,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        for (int i = 0; i < INPUTS.length; i++) {
+        for(int i = 0; i < INPUTS.length; i++){
             var result = convertToIntervals(INPUTS[i]);
             var expectedResult = RESULTS[i];
             boolean correct = result.equalsIgnoreCase(expectedResult);
@@ -28,44 +28,36 @@ public class Main {
     }
 
     private static String convertToIntervals(Integer[] input) {
-        StringBuilder res = new StringBuilder();
-        int flag = 0, count = 0;
-        for (int i = 0; i < input.length - 1; i++) {
+     StringBuilder res = new StringBuilder();
+        int flag = 0,count=0;
+        for (int i = 0; i < input.length-1 ; i++) {
             if (input[i + 1] != input[i] + 1) {
 
                 if (flag > 1) {
                     res.append("-");
-                } else {
+                } else{
                     res.append(",");
                 }
-                if (count == 0) {
-                    res.append(input[i]);
-                    res.append(",");
-                }
+                if(count==0){res.append(input[i]);
+                res.append(",");}
                 res.append(input[i + 1]);
                 flag = 0;
                 count++;
             } else {
-                count = 0;
-                if (i == 0) {
-                    res.append(input[i]);
+                count=0;
+                if(i==0){    res.append(input[i]);
                 }
-                if (i == input.length - 2) {
-                    if (flag != 0) {
-                        res.append("-");
-                    } else {
-                        res.append(",");
-                    }
-                    res.append(input[input.length - 1]);
-                }
+                if(i== input.length-2){
+                    if(flag!=0){res.append("-");}else{res.append(",");}
+                    res.append(input[input.length-1]);}
                 flag++;
 
             }
         }
 
-        if (res.charAt(0) == ',' || (res.charAt(0) == '-' && res.charAt(1) == '-')) {
-            res.deleteCharAt(0);
-        }
+        if(res.charAt(0)==',' ||(res.charAt(0)=='-' && res.charAt(1)=='-')){
+    res.deleteCharAt(0);
+}
 
         return res.toString();
     }

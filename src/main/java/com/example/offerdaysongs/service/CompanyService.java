@@ -19,27 +19,28 @@ public class CompanyService {
         this.companyRepository = companyRepository;
     }
 
-    public List<Company> getAll() {
+    public List<Company> getAll()
+    {
         return companyRepository.findAll();
     }
 
-    public Company getById(long id) {
+    public Company getById(long id)
+    {
         return companyRepository.getById(id);
     }
 
-    public void deleteAll() {
-        companyRepository.deleteAll();
+    public void deleteAll(){
+     companyRepository.deleteAll();
     }
 
     @Transactional
-    public Company update(UpdateCompanyRequest request) {
-        var company = companyRepository.getById(request.getCompany().getId());
+    public Company update(UpdateCompanyRequest request){
+        var company=companyRepository.getById(request.getCompany().getId());
         company.setName(request.getCompany().getName());
         return companyRepository.save(company);
     }
-
     @Transactional
-    public void delete(DeleteCompanyRequest request) {
+    public void delete(DeleteCompanyRequest request){
         companyRepository.delete(request.getCompany());
     }
 

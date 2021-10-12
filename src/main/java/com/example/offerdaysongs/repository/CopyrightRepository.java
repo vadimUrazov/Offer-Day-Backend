@@ -1,5 +1,6 @@
 package com.example.offerdaysongs.repository;
 
+import com.example.offerdaysongs.model.Company;
 import com.example.offerdaysongs.model.Copyright;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;

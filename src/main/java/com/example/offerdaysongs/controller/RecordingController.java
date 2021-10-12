@@ -34,7 +34,7 @@ public class RecordingController {
     }
 
     @PostMapping("/copyright")
-    public RecordingDto addCopyright(AddCopyrightRequest request) {
+    public RecordingDto addCopyright(AddCopyrightRequest request){
         return convertToDto(recordingService.addCopyright(request));
 
     }
@@ -69,7 +69,7 @@ public class RecordingController {
                 recording.getReleaseTime(),
                 singer != null ? new SingerDto(singer.getId(), singer.getName()) : null,
                 recording.getPrice()
-        );
+                 );
 
 
     }

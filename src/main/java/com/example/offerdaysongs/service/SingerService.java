@@ -22,7 +22,7 @@ public class SingerService {
         return singerRepository.findAll();
     }
 
-    public void deleteAll() {
+    public void deleteAll(){
         singerRepository.deleteAll();
     }
 
